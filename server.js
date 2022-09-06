@@ -10,6 +10,7 @@ const cors = require("cors");
 app.use(cors());
 
 app.use(express.urlencoded({extended: false}));
+app.use(express.static('public'))
 
 const nodemailer = require("nodemailer");
 const { triggerAsyncId } = require("async_hooks");
@@ -41,7 +42,7 @@ app.post("/sendmail", (req, res) => {
         html: `<br> We found love in a hopeless place (i.e, yeh bakwas college) <br> <br> <img src = "cid:unique@kreata.ee"/>`,
         attachments: [{
                 filename: 'POSTER.png',
-                path: 'images/POSTER.png',
+                path: 'public/images/POSTER.png',
                 cid: 'unique@kreata.ee',
               }]
     }
@@ -64,7 +65,7 @@ app.post("/sendmail", (req, res) => {
 
 
  app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./mainpage.html"));
+    res.sendFile(path.join(__dirname, ".public/mainpage.html"));
  })
 
  app.listen(port, () => {
