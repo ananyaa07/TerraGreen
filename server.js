@@ -65,7 +65,7 @@ app.post("/sendmail", (req, res) => {
 
 
  app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, ".public/mainpage.html"));
+    res.sendFile(path.join(__dirname, "public/mainpage.html"));
  })
 
  app.listen(port, () => {
