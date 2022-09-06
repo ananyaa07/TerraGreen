@@ -49,18 +49,14 @@ app.post("/sendmail", (req, res) => {
 
     transporter
         .sendMail(mailOptions)
-        .then(() => alert("Email successfully sent!"))
-        .catch((error) => alert("Failed to send email."))
-        // .then(() => {
-        //     res.json({
-        //         status: "SUCCESS",
-        //         message: "Message sent successfully"
-        //     })
-        // })
-        // .catch((error) => {
-        //     console.log(error);
-        //     res.json({status: "FAILED", message: "Error occurred!"});
-        // })
+        // .then(() => alert("Email successfully sent!"))
+        // .catch((error) => alert("Failed to send email."))
+        .then(() => {
+            alert("Email sent successfully")
+        })
+        .catch((error) => {
+            alert("Some error occurred")
+        })
  })
 
 
