@@ -36,6 +36,11 @@ const menuBtn = document.querySelector(".menu-btn");
       });
     });
 
+
+
+
+    
+
       var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,

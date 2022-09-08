@@ -1,0 +1,399 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: rgba(14, 105, 54, 0.776);
+
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.page {
+    margin: auto;
+    margin-top: 10vh;
+    padding: 5vw;
+    width: 60vw;
+    height: 100%;
+    background-color: white;
+}
+
+.content {
+    z-index: 1;
+}
+
+.sub-head {
+    text-align: left;
+}
+
+.imgs {
+    width: 50vw;
+    height: 23vw;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    object-fit: cover;
+}
+
+.imgwrap {
+    margin-top: 3vh;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 4vh;
+}
+
+#title {
+    text-align: left;
+    font-size: 8vh;
+    margin-top: 2vh;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5vh;
+}
+
+.tsk {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 6vh;
+}
+
+.campaign1 {
+    height: 700px;
+    object-fit: cover;
+    width: 100%;
+    margin-top: 4.8rem;
+}
+
+.text1 {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    left: 70%;
+    color: rgb(255, 255, 255);
+    /* left: 10%; */
+    /* transform: translate(-50%,-50%); */
+}
+
+.text1 h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.text1 p {
+    padding: 36px;
+    font-size: 2vh;
+    letter-spacing: 0.5px;
+}
+
+/* .wrapper h1 {
+    font-size: 5vh;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-top: 7vh;
+} */
+
+
+.container{
+    /* background:linear-gradient(45deg, blueviolet, lightgreen); */
+    padding:15px 9%;
+    padding-bottom: 100px;
+}
+
+.container1 .heading{
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    padding-bottom: 1vh;
+    color:#333;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 50px;
+}
+
+.container1 .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap:24px;
+    padding-left:3vw;
+    padding-right:3vw;
+
+}
+
+.container1 .box-container .box1{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: rgba(141, 188, 161, 0.776);
+    text-align: center;
+    padding:30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container1 .box-container .box1 img{
+    height: 80px;
+}
+
+.container1 .box-container .box1 h3{
+    color:#444;
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    padding:10px 0;
+}
+
+.container1 .box-container .box1 p{
+    color:rgb(0, 0, 0);
+    font-size: 2.3vh;
+    line-height: 1.8;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  
+}
+.yoooo{ 
+    margin-top: 3vh;
+    
+    
+}
+a{
+    text-decoration: none;
+}
+
+.container1 .box-container .box1 .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background:#333;
+    color:#fff;
+    font-size: 2.7vh;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.container1 .box-container .box1 .btn:hover{
+    letter-spacing: 1px;
+}
+
+.container1 .box-container .box1:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+  
+
+@media screen and (max-width: 1040px) {
+    
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 2vh;
+    }
+
+    .page {
+        width: 82%;
+        padding: 2em;
+    }
+
+
+    .imgs {
+        width: 66vw;
+        height: 30vw;
+        border-radius: 14px;
+        margin-bottom: -1rem;
+        /* margin-top: -1rem; */
+        object-fit: cover;
+    }
+
+    p {
+        margin-top: 4vh;
+        font-size: 0.8em;
+        margin-bottom: 8vh;
+    }
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-items a {
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a:before {
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation.active .navigation-items {
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    .menu-btn {
+        background: url(videos/icons8-menu-50.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(videos/icons8-menu-50.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+
+    .campaign1 {
+        height: 350px;
+        object-fit: cover;
+        width: 100%;
+        margin-top: 4.4rem;
+    }
+
+    .content h1 {
+
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 3vh;
+    }
+
+    .content p {
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 2.5vh;
+    }
+    .text1 {
+        position: absolute;
+        top: 60%;
+        right: 5%;
+        left: 60%;
+        color: rgb(255, 255, 255);
+        /* left: 10%; */
+        /* transform: translate(-50%,-50%); */
+    }
+    .text1 h3 {
+        margin-top:-50px;
+        margin-left: 12px;
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .container1{
+        padding:20px;
+    }
+    .container1 .box-container .box1 p{
+        color:rgb(54, 52, 52);
+        font-size: 18px;
+        
+    }
+    .container1 .box-container{
+     
+        gap:30px;
+    }
+}

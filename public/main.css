@@ -777,7 +777,7 @@ input[type=submit]:hover {
 
   header .navigation .navigation-items a{
     color: #222;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 20px;
   }
 
@@ -817,18 +817,30 @@ input[type=submit]:hover {
     transition: 0.3s ease;
   }
 
-  
+  .home:before {
+    z-index: 200;
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
   
 }
 
-@media (max-width: 560px){
+@media (max-width: 1060px){
+  
   .home .content h1{
     font-size: 30px;
     line-height: 40px;
+    text-align:center;
+    margin-left:20vw;
   }
   .home .content p{
-    font-size:20px;
-    text-align: center;
+    font-size:19px;
+
+    margin-left:20vw;
 
   }
   .section-header__heading{

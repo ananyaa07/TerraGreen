@@ -38,8 +38,8 @@ app.post("/sendmail", (req, res) => {
     const mailOptions = {
         from: "terra.green.campaign@gmail.com",
         to: to,
-        subject: "Pyar mohabbat dhoka hai lekin",
-        html: `<br> We found love in a hopeless place (i.e, yeh bakwas college) <br> <br> <img src = "cid:unique@kreata.ee"/>`,
+        subject: "Invitation to TerraGreen Campaign",
+        html: `<br> We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <br> <br> <img src = "cid:unique@kreata.ee"/>`,
         attachments: [{
                 filename: 'POSTER.png',
                 path: 'public/images/POSTER.png',
