@@ -33,14 +33,14 @@ const transporter = nodemailer.createTransport({
 //     }
 // });
 
-app.post("/sendmail", (req, res) => {
+app.post("/", (req, res) => {
     const to = req.body.to;
     const mailOptions = {
         
         from: "terra.green.campaign@gmail.com",
         to: to,
         subject: "Join the TerraGreen Community",
-        html: `We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <img src = "cid:unique@kreata.ee"/>`,
+        html: `We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <br> <img src = "cid:unique@kreata.ee"/>`,
         attachments: [{
                 filename: 'POSTER.png',
                 path: 'public/images/POSTER.png',
@@ -51,10 +51,7 @@ app.post("/sendmail", (req, res) => {
     transporter
         .sendMail(mailOptions)
         .then(() => {
-            res.json({
-                status: "SUCCESS",
-                message: "Message sent successfully"
-            })
+            res.sendFile(path.join(__dirname, "./public/mainpage.html"));
         })
         .catch((error) => {
             console.log(error);
