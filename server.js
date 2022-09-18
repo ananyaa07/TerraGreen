@@ -1,16 +1,16 @@
 const express = require("express");
 const app = express()
 const port = process.env.PORT || 5500;
-
-
+let alert = require("alert");
 
 require("dotenv").config();
 const path = require("path");
 
 const cors = require("cors");
 app.use(cors());
-app.use(express.static('public'))
+
 app.use(express.urlencoded({extended: false}));
+app.use(express.static('public'))
 
 const nodemailer = require("nodemailer");
 const { triggerAsyncId } = require("async_hooks");
@@ -36,11 +36,10 @@ const transporter = nodemailer.createTransport({
 app.post("/sendmail", (req, res) => {
     const to = req.body.to;
     const mailOptions = {
-        
         from: "terra.green.campaign@gmail.com",
         to: to,
-        subject: "Join the TerraGreen Community",
-        html: `We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <img src = "cid:unique@kreata.ee"/>`,
+        subject: "Invitation to TerraGreen Campaign",
+        html: `<br> We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <br> <br> <img src = "cid:unique@kreata.ee"/>`,
         attachments: [{
                 filename: 'POSTER.png',
                 path: 'public/images/POSTER.png',
@@ -50,21 +49,19 @@ app.post("/sendmail", (req, res) => {
 
     transporter
         .sendMail(mailOptions)
+        // .then(() => alert("Email successfully sent!"))
+        // .catch((error) => alert("Failed to send email."))
         .then(() => {
-            res.json({
-                status: "SUCCESS",
-                message: "Message sent successfully"
-            })
+            alert("Email sent successfully")
         })
         .catch((error) => {
-            console.log(error);
-            res.json({status: "FAILED", message: "Error occurred!"});
+            alert("Some error occurred")
         })
  })
 
 
  app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/mainpage.html"));
+    res.sendFile(path.join(__dirname, "public/mainpage.html"));
  })
 
  app.listen(port, () => {

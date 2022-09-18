@@ -1,13 +1,12 @@
 
 const menuBtn = document.querySelector(".menu-btn");
     const navigation = document.querySelector(".navigation");
-    
+
     menuBtn.addEventListener("click", () => {
       menuBtn.classList.toggle("active");
       navigation.classList.toggle("active");
     });
 
-var time=2000;
     
     const btns = document.querySelectorAll(".nav-btn");
     const slides = document.querySelectorAll(".video-slide");
@@ -31,9 +30,9 @@ var time=2000;
       contents[manual].classList.add("active");
     }
 
-    btns.forEach((btn, time) => {
+    btns.forEach((btn, i) => {
       btn.addEventListener("click", () => {
-        sliderNav(time);
+        sliderNav(i);
       });
     });
 

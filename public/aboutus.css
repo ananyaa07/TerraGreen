@@ -118,6 +118,7 @@ h1 {
 }
 
 p {
+  text-align: center;
 	font-family: "Poppins", sans-serif;
 	font-size: 2.5vh;
 }
@@ -157,8 +158,8 @@ p {
     margin-right: 10rem;
     font-size: 3vh;
     font-family: "Poppins", sans-serif;
+    font-weight: 480;
 }
-
 .text1{
   position: absolute;
   top: 20%;
@@ -168,27 +169,21 @@ p {
   /* left: 10%; */
   /* transform: translate(-50%,-50%); */
 }
-
-
 .text1 h3{
   font-size: 7vh;
   line-height: 1.2;
 }
-
-
 .text1 p{
   padding: 36px;
-  font-size: 2vh;
+  font-size: 2.6vh;
   letter-spacing: 0.5px;
 }
-
 .wrapper h1{
   font-size: 5vh;
   margin-bottom: 60px;
   text-align: center;
   margin-top: 7vh;
 }
-
 
 .team{
   display: flex;
@@ -206,30 +201,26 @@ p {
   margin: 5px;
   margin-bottom: 50px;
   width: 300px;
-  padding: 20px;
+  padding: 40px;
   line-height: 20px;
-  color: #f3f3f3;  
+  color: #fffefe;  
   position: relative;
-  
   
 }
 
 .team .team_member h3{
-  color: #d6dbd1;
+  color: #fefffd;
   font-size: 26px;
   margin-top: 50px;
 }
 
-
-
 .team .team_member p.role{
   color: white;
   margin: 12px 0;
-  font-size: 10px;
+  font-size: 16px;
   text-transform: uppercase;
   
 }
-
 
 .team .team_member .team_img{
   position: absolute;
@@ -263,6 +254,8 @@ p {
 
 
 
+
+
 @media screen and (max-width: 1040px) {
 	h1{
         text-align: center;
@@ -292,12 +285,12 @@ p {
 
     p{
         margin-top: 4vh;
-        font-size: 1em;
+        font-size: 1.2em;
         margin-bottom:8vh;
-        color:white;
+        color:rgb(255, 255, 255);
     }
 
-    
+
     header{
       padding: 12px 20px;
     }
@@ -388,7 +381,7 @@ p {
       text-align:center;
       margin-left: 3vw;
       margin-right: 3vw;
-      font-size: 4vh;
+      font-size: 8vw;
       font-family: "Poppins", sans-serif;
   }
   .content p{
@@ -397,26 +390,15 @@ p {
       margin-right: 3vw;
       font-size: 5vw;
       font-weight: 450;
-      color: #222;
+      color:rgb(1, 0, 0);
       font-family: "Poppins", sans-serif;
   }
-  
-
- 
-  .team .team_member p.role {
-    font-size:2vh;
-  }
-  
-
-
-
-
   .text1{
     position: absolute;
     top: 25%;
     right:2%;
     left: 45%;
-    color: rgba(14, 105, 54, 0.776)
+    color: rgba(14, 105, 54, 0.776);
     /* left: 10%; */
     /* transform: translate(-50%,-50%); */
   }
@@ -435,7 +417,7 @@ p {
    margin-top: 3vh;
   }
   #teamhead{
-    font-size: 4vh;
+    font-size: 8vw;
     font-family: "Poppins", sans-serif;
   }
   
