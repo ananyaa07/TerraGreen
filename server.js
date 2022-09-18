@@ -40,7 +40,7 @@ app.post("/", (req, res) => {
         from: "terra.green.campaign@gmail.com",
         to: to,
         subject: "Join the TerraGreen Community",
-        html: `We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <br> <img src = "cid:unique@kreata.ee"/>`,
+        html: `We are a community of people committed to improving the world that we live in. We aim to spread awareness about the various climate change phenomena and their causes, and encourage the public to take steps like recycling, minimise wastage and dedicate their time for a good cause by participating in environmental campaigns. To get notified about future campaigns, follow us on Instagram. <br> <br> <img src = "cid:unique@kreata.ee"/>`,
         attachments: [{
                 filename: 'POSTER.png',
                 path: 'public/images/POSTER.png',
